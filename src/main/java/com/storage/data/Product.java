@@ -12,7 +12,7 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String sq;
+	private String sku;
 	private String name;
 	private String color;
 	private String weight;
@@ -35,12 +35,12 @@ public class Product {
 		this.id = id;
 	}
 
-	public String getSq() {
-		return sq;
+	public String getSku() {
+		return sku;
 	}
 
-	public void setSq(String sq) {
-		this.sq = sq;
+	public void setSku(String sku) {
+		this.sku = sku;
 	}
 
 	public String getName() {

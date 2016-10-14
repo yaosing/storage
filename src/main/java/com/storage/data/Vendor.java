@@ -10,26 +10,55 @@ public class Vendor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String sq;
+	private String sku;
 	private String name;
 	private String address;
 	private String phoneNumber;
 	private String comment;
+	private String saler;
+	private String salerLink;
+
+	public Vendor(String sku, String name, String address, String phoneNumber, String comment, String saler,
+			String salerLink) {
+		this.sku = sku;
+		this.name = name;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.comment = comment;
+		this.saler = saler;
+		this.salerLink = salerLink;
+	}
+
+	public String getSaler() {
+		return saler;
+	}
+
+	public void setSaler(String saler) {
+		this.saler = saler;
+	}
+
+	public String getSalerLink() {
+		return salerLink;
+	}
+
+	public void setSalerLink(String salerLink) {
+		this.salerLink = salerLink;
+	}
 
 	public Long getId() {
 		return id;
 	}
 
+	public String getSku() {
+		return sku;
+	}
+
+	public void setSku(String sku) {
+		this.sku = sku;
+	}
+
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getSq() {
-		return sq;
-	}
-
-	public void setSq(String sq) {
-		this.sq = sq;
 	}
 
 	public String getName() {
